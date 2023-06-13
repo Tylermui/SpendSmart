@@ -1,23 +1,26 @@
 import './App.css';
-import { Header } from './components/Header';
-import { Balance } from './components/Balance';
-import { IncomeExpenses } from './components/IncomeExpenses';
-import { TransactionList } from './components/TransactionList';
-import { AddTransaction } from './components/AddTransaction';
-import { GlobalProvider } from './context/GlobalState';
+
+import { AddIncomePage } from './components/pages/AddIncomePage';
+import { HomePage } from './components/pages/HomePage';
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Redirect,
+} from "react-router-dom";
 
 
 function App() {
   return (
-    <GlobalProvider>
-      <Header />
-      <div className='Balance'>
-        <Balance />
-        <IncomeExpenses />
-        <TransactionList />
-        <AddTransaction />
-      </div>
-    </GlobalProvider>
+    <Router>
+      
+      {/* This how the app will go to different routes */}
+      <Routes>
+        <Route exact path='/' Component={HomePage} />
+        <Route exact path='/AddIncome' Component={AddIncomePage} />
+      </Routes>
+    </Router>
   );
 }
 
