@@ -17,9 +17,10 @@ export const NavigationBar = () => {
       </button>
       <div className="collapse navbar-collapse" id="navbar">
         <div className="navbar-nav">
-          <a className="nav-item nav-link" id="home" href="/">SpendSmart</a>
-          <a className="nav-item nav-link" id="logout" href="/logout">Logout</a>
-          <Link className="nav-item nav-link" to="/AddIncome">Add Income</Link>
+        <Link className="nav-item nav-link" to="/">SpendSmart</Link>
+        <Link className="nav-item nav-link" to="/AddExpense">Add Expense</Link>
+        <Link className="nav-item nav-link" to="/AddIncome">Add Income</Link>
+        <Link className="nav-item nav-link" to="/Logout">Logout</Link>
         </div>
       </div>
     </nav>  
