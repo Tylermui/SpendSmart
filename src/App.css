@@ -50,6 +50,11 @@ h4 {
   margin: 30px 0;
 }
 
+.to-right { 
+  position: absolute;
+  right: 0;
+}
+
 .inc-exp-container > div {
   flex: 1;
   text-align: center;

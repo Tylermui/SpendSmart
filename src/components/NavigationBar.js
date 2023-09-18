@@ -20,7 +20,8 @@ export const NavigationBar = () => {
         <Link className="nav-item nav-link" to="/">SpendSmart</Link>
         <Link className="nav-item nav-link" to="/AddExpense">Add Expense</Link>
         <Link className="nav-item nav-link" to="/AddIncome">Add Income</Link>
-        <Link className="nav-item nav-link" to="/Logout">Logout</Link>
+
+        <Link className="nav-item nav-link to-right" to="/Logout">Logout</Link>
         </div>
       </div>
     </nav>  
