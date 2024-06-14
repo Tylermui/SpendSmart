@@ -3,18 +3,18 @@ import { Header } from '../Header'
 import { Balance } from '../Balance';
 import { IncomeExpenses } from '../functions/IncomeExpenses';
 import { TransactionList } from '../TransactionList';
-import { AddTransaction } from '../functions/AddExpense';
+import { AddTransaction } from '../functions/AddIncome';
 import { GlobalProvider } from '../../context/GlobalState';
 import { NavigationBar } from '../NavigationBar';
+import { LoginSignUp } from '../LoginSignUp'
 
-export const AddExpensePage = () => {
+export const LandingPage = () => {
   return (
     <GlobalProvider>
-      <NavigationBar />
-      <Header />
-      <div className='Balance'>
-        <AddTransaction />
-      </div>
+        <Header />
+        <div className='Login'>
+            <LoginSignUp />
+        </div>
     </GlobalProvider>
   )
 }

@@ -1,5 +1,5 @@
 import React, {useState, useContext} from 'react'
-import { GlobalContext } from '../context/GlobalState';
+import { GlobalContext } from '../../context/GlobalState';
 
 export const AddTransaction = () => {
   const [text, setText] = useState('');
@@ -12,15 +12,16 @@ export const AddTransaction = () => {
 
     const newTransaction = {
       id: Math.floor(Math.random() * 100000000),
-      type: 'expense',
+      type: 'income',
       text,
       amount: +amount
     }
     addTransaction(newTransaction);
   }
+
   return (
     <>
-      <h3>Add new Expense</h3>
+      <h3>Add new Income</h3>
       <form onSubmit={onSubmit}>
         <div className="form-control">
           <label htmlFor="text">Text</label>
